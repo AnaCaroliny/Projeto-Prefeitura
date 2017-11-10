@@ -1,0 +1,19 @@
+<html>
+	<head>
+	<title>Minha primeira página PHP</title>
+	</head>
+	<body>
+
+<?php
+if(!@($conexao=pg_connect ("host=127.0.0.1 dbname=Social port=5432 user=postgres password=1234"))) {
+   print "Não foi possível estabelecer uma conexão com o banco de dados.";
+} else {
+   pg_close ($conexao);
+   print "Conexão OK!"; 
+}
+?> 
+
+	</body>
+	</html>
+   
+
